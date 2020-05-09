@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-const URL = 'http://localhost:3000';
+const URL = 'https://serene-plains-21154.herokuapp.com';
 
 export const getCloud = async (someId) => {
     const data = await request.get(`${URL}/clouds/${someId}`);
