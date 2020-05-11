@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 // import { clouds } from './clouds.js'
-import request from 'superagent'
+// import request from 'superagent'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import CloudList from './CloudList.js'
 import DetailPage from './DetailPage.js'
 import AdminPage from './AdminPage.js'
-
+import './App.css';
 
 export default class App extends Component {
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { addCloud } from './api-calls.js'
 
+
 export default class AdminPage extends Component {
     state = {
         name: '',
