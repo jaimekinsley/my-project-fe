@@ -16,7 +16,7 @@ export default class DetailPage extends Component {
 
                 <div>
                 {
-                    this.state.song
+                    this.state.cloud
                     ? JSON.stringify(this.state.cloud)
                     : 'Loading........'
                 }

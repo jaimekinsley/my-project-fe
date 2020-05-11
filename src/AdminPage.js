@@ -14,6 +14,15 @@ export default class AdminPage extends Component {
         const newCloud = await addCloud(this.state)
 
         this.setState({ success: newCloud })
+
+        this.props.history.push(`/cloud/${newCloud.id}`);
+
+    }
+
+    handleGeneralChange = (e) => {
+        const newState = {}
+        newState[e.target.name] = e.target.value;
+        this.setState(newState);
     }
 
     render() {
@@ -34,10 +43,10 @@ export default class AdminPage extends Component {
                     </label>
 
                     <label> Is Severe
-                    <input onChange={this.handleGeneralChange} checked={is_severe === 'true'} name="isSevere" type="radio" value="true"/>
+                    <input onChange={this.handleGeneralChange} checked={is_severe === "true"} name="is_severe" type="radio" value="true" />
                     </label>
 
-                    <label> Is Not Severe<input onChange={this.handleGeneralChange} checked={is_severe === 'false'}name="isSevere" type="radio" value="false"/>
+                    <label> Is Not Severe<input onChange={this.handleGeneralChange} checked={is_severe === "false"} name="is_severe" type="radio" value="false" />
                     </label>
 
                     <button>Submit</button>
@@ -47,3 +56,5 @@ export default class AdminPage extends Component {
         )
     }
 }
+
+
