@@ -19,3 +19,9 @@ export const addCloud = async (cloud) => {
 
     return data.body;
 }
+
+export const newCloudName = async (cloud) => {
+    const data = await request.put(`${URL}/clouds/`, cloud);
+
+    return data.body;
+}
